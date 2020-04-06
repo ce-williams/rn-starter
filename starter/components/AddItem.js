@@ -9,20 +9,24 @@ import {
 // import Icon from 'react-native-vector-icons/dist/FontAwesome';
 // import {Ionicons} from '@expo/vector-icons';
 
+const submitAndClear = () => {};
+
 const AddItem = ({title, addItem}) => {
   const [text, setText] = useState('');
   const onChange = (textValue) => setText(textValue);
+  // const clearInput = ()
   return (
     <View style={styles.header}>
       <TextInput
         placeholder="Add Item..."
         style={styles.input}
         onChangeText={onChange}
+        levalue={this.text}
       />
-      <TouchableOpacity style={styles.btn} onPress={() => addItem(text)}>
+      <TouchableOpacity 
+      style={styles.btn} 
+      onPress={(text) => addItem(text)}>
         <Text style={styles.btnText}>
-          {/* <Icon name="plus" solid size={20} /> */}
-          {/* <Ionicons name="pluscircleo" size={20} color="green" /> */}
           Add Item
         </Text>
       </TouchableOpacity>
@@ -38,7 +42,6 @@ const styles = StyleSheet.create({
   },
   btn: {
     backgroundColor: '#73bfa2',
-    opacity: '75',
     padding: 9,
     margin: 5,
   },

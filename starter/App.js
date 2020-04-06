@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, FlatList, Alert} from 'react-native';
+import {View, Text, StyleSheet, FlatList, Alert, TextInput} from 'react-native';
 import Header from './components/Header';
 import ListItem from './components/ListItem';
 import AddItem from './components/AddItem';
@@ -26,7 +26,7 @@ const App = () => {
       Alert.alert('Error', 'Please enter and item', {text: 'Ok'});
     } else {
       setItems((prevItems) => {
-        return [{id: uuid(), text}, ...prevItems];
+        return [{id: uuid(), text}, ...prevItems];  
       });
     }
   };
